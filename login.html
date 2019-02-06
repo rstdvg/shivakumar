@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<script type="text/javascript">
+		function myfunction() {
+var uname=document.getElementById('uname').value;
+var pwd=document.getElementById('password').value;
+if(uname!=null && pwd=="welcome")
+{
+ localStorage.setItem("uname", uname);
+
+            return true;
+}
+else
+{
+	document.getElementById("msg").innerHTML ="enter correct password";
+}
+
+		}
+
+		
+	</script>
+</head>
+<body>
+	<div>
+		<form  action="confirm.html">
+		<label> Name</label><input type="text" name="username" id="uname"><br><br>
+		<label>Password</label><input type="text" name="password" id="password"><br><br>
+		<!-- <input type="submit" name="submit" value="submit" onclick="myfunction()"> -->
+		<button onclick="myfunction()">SUBMIT</button>
+		<p id="msg"></p>
+		</form>
+	</div>
+
+</body>
+</html>
+
+
